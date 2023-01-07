@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.1 (Python 3.10.7 on win32)" generated="20221231 09:34:53.439" rpa="false" schemaversion="3">
+<suite id="s1" name="TC 001" source="C:\Users\Nitin Tyagi\PycharmProjects\RobotFrameworkDec\TestCases\TC_001.robot">
+<kw name="User opens browser and enter URL" library="CommonCode" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.facebook.com</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221231 09:34:53.655" level="INFO">Opening browser 'Chrome' to base url 'https://www.facebook.com'.</msg>
+<status status="PASS" starttime="20221231 09:34:53.655" endtime="20221231 09:34:55.740"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221231 09:34:55.740" endtime="20221231 09:34:55.855"/>
+</kw>
+<status status="PASS" starttime="20221231 09:34:53.655" endtime="20221231 09:34:55.855"/>
+</kw>
+<test id="s1-t1" name="TC_001_Login_Logout" line="12">
+<kw name="When User enters username to the application" library="LoginPage">
+<kw name="User enters data to the textbox" library="UserGenericActivities">
+<arg>${LOGIN_USERNAME}</arg>
+<arg>HelloWorld</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20221231 09:34:55.856" endtime="20221231 09:34:55.869"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221231 09:34:55.870" endtime="20221231 09:34:55.890"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${LOGIN_USERNAME}</arg>
+<arg>${data}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221231 09:34:55.890" level="INFO">Typing text 'HelloWorld' into text field 'id=email'.</msg>
+<status status="PASS" starttime="20221231 09:34:55.890" endtime="20221231 09:34:55.959"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Entered data to the element--&gt;${locator},${data}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221231 09:34:55.959" endtime="20221231 09:34:55.960"/>
+</kw>
+<status status="PASS" starttime="20221231 09:34:55.856" endtime="20221231 09:34:55.960"/>
+</kw>
+<status status="PASS" starttime="20221231 09:34:55.856" endtime="20221231 09:34:55.960"/>
+</kw>
+<kw name="And User enters password to the application" library="LoginPage">
+<kw name="User enters data to the textbox" library="UserGenericActivities">
+<arg>${login_password}</arg>
+<arg>HelloWorld</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20221231 09:34:55.961" endtime="20221231 09:34:55.971"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221231 09:34:55.971" endtime="20221231 09:34:55.991"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${LOGIN_USERNAME}</arg>
+<arg>${data}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221231 09:34:55.992" level="INFO">Typing text 'HelloWorld' into text field 'id=email'.</msg>
+<status status="PASS" starttime="20221231 09:34:55.991" endtime="20221231 09:34:56.059"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Entered data to the element--&gt;${locator},${data}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221231 09:34:56.060" endtime="20221231 09:34:56.060"/>
+</kw>
+<status status="PASS" starttime="20221231 09:34:55.960" endtime="20221231 09:34:56.060"/>
+</kw>
+<status status="PASS" starttime="20221231 09:34:55.960" endtime="20221231 09:34:56.060"/>
+</kw>
+<kw name="And User clicks on Signin button" library="LoginPage">
+<kw name="User clicks on a button" library="UserGenericActivities">
+<arg>${login_signin_button}</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20221231 09:34:56.062" endtime="20221231 09:34:56.072"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221231 09:34:56.073" endtime="20221231 09:34:56.088"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221231 09:34:56.088" level="INFO">Clicking element 'xpath=//button[@name='login']'.</msg>
+<status status="PASS" starttime="20221231 09:34:56.088" endtime="20221231 09:34:56.147"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Clicked on the element--&gt;${locator}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221231 09:34:56.147" endtime="20221231 09:34:56.147"/>
+</kw>
+<status status="PASS" starttime="20221231 09:34:56.061" endtime="20221231 09:34:56.147"/>
+</kw>
+<status status="PASS" starttime="20221231 09:34:56.061" endtime="20221231 09:34:56.147"/>
+</kw>
+<kw name="Then Validate Element Present on Page" library="PageValidations">
+<arg>${login_signin_button}</arg>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20221231 09:35:06.625" level="INFO">Current page contains element 'xpath=//button[@name='login']'.</msg>
+<status status="PASS" starttime="20221231 09:34:56.148" endtime="20221231 09:35:06.625"/>
+</kw>
+<status status="PASS" starttime="20221231 09:34:56.148" endtime="20221231 09:35:06.625"/>
+</kw>
+<status status="PASS" starttime="20221231 09:34:55.855" endtime="20221231 09:35:06.626"/>
+</test>
+<kw name="User close browser after testcase" library="CommonCode" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221231 09:35:06.627" endtime="20221231 09:35:08.748"/>
+</kw>
+<status status="PASS" starttime="20221231 09:35:06.627" endtime="20221231 09:35:08.748"/>
+</kw>
+<status status="PASS" starttime="20221231 09:34:53.440" endtime="20221231 09:35:08.748"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="TC 001">TC 001</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20221231 09:34:53.644" level="ERROR">Error in file 'C:\Users\Nitin Tyagi\PycharmProjects\RobotFrameworkDec\TestCases\TC_001.robot' on line 3: Resource file '..\Resources\UserLoginActivities.robot' does not exist.</msg>
+</errors>
+</robot>
